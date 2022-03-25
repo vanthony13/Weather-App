@@ -1,0 +1,231 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+   
+  button,
+  input {
+    border: none;
+    background-color: rgb(194, 194, 194);
+    border-radius: 7px 0px 0px 7px;
+    color: inherit;
+  }
+
+  ::placeholder{
+    font-size: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    color: #0a1f44;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  
+  /* SECTION #1
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .heading {
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+    padding: 0 0 30px 0;
+  }
+  
+  .top-banner form {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-banner form input {
+    font-size: 20px;
+    height: 40px;
+    padding: 5px 5px 10px;
+    width: 400px;
+    border-bottom: 1px solid;
+  }
+  
+  .top-banner form input::placeholder {
+    color: white; 
+     background-color: rgb(194, 194, 194);
+  }
+  
+  .top-banner form button {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding: 12px 17px;
+    margin-left: 7px;
+    border-radius: 0px 7px 7px 0px;
+    background: rgb(15, 235, 15);
+    color: white;
+
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .top-banner form button:hover {
+    background: green;
+  }
+  
+  .top-banner form .msg {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    max-width: 450px;
+    min-height: 40px;
+    color: red;
+  }
+  
+  
+  /* SECTION #2
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .ajax-section {
+    margin: 70px 0 20px;
+  }
+  
+  .ajax-section .cities {
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .ajax-section .city {
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background-color: rgb(194, 194, 194);
+    color: var(--text_med);
+  }
+  
+  .ajax-section .city::after {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 20px;
+    background-color: gray;   
+  }
+  
+  .ajax-section figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    
+  }
+  
+  .ajax-section .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_dark);
+    
+  }
+  
+  .ajax-section .city sup {
+    font-size: 0.5em;
+  }
+  
+  .ajax-section .city-name sup {
+   display: none;
+  }
+  
+  .ajax-section .city-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+   
+  }
+   
+  /*–––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (max-width: 1000px) {
+    body {
+      padding: 30px;
+    }
+    
+    .ajax-section .cities {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .heading,
+    .ajax-section .city-temp {
+      font-size: 3rem;
+    }
+    
+    .ajax-section {
+      margin-top: 20px;
+    }
+    
+    .top-banner form {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .top-banner form input,
+    .top-banner form button {
+      width: 100%;
+    }
+  
+    .top-banner form button {
+      margin: 20px 0 0 0;
+    }
+    
+    .top-banner form .msg {
+      position: static;
+      max-width: none;
+      min-height: 0;
+      margin-top: 10px;
+    }
+  
+    .ajax-section .cities {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    body {
+      padding: 15px;
+    }
+    
+    .ajax-section .cities {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  
+  /* API Key banner
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .api {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* .body{
+    background-color: #e6e6e6;
+    width: 1000px;
+    margin: auto;
+    height: 800px;
+    overflow: scroll;
+    margin-top: 100px;
+  } */
+
+  
